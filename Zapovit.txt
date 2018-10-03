@@ -9,7 +9,6 @@ Hello, Denys
 Hello Valentyn)
 hi, next user
 Don't commit pleaaaseee
-<<<<<<< HEAD
 Dannnn
 Andrew's changes
 Andrew's changes
