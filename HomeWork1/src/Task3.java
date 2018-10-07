@@ -17,7 +17,7 @@ public class Task3 {
 			System.out.println("t" + (i+1) + ": ");
 			t[i] = Integer.parseInt(br.readLine());
 			cost[i] = c[i] * t[i];
-			costt = cost[i];
+			costt += cost[i];
 			System.out.println();
 			if(i == 2) {
 				System.out.println("All cost: " + costt);
