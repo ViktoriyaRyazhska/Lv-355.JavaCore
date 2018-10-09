@@ -2,6 +2,7 @@ package hm2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class Person{
 	
@@ -17,14 +18,14 @@ public class Person{
 	public Person() {
 	}
 	public int age() {
-		return 2018-birthYear;
+		return LocalDate.now().getYear()-birthYear;
 	}
 	
 	public void info (BufferedReader br) throws IOException {
-	System.out.println("Input name");
+	System.out.println("Your name:");
 	this.name = br.readLine();
-	System.out.println("Input your birthday year");
-	this.birthYear = Integer.parseInt(br.readLine());;
+	System.out.println("Your birthday year:");
+	this.birthYear = Integer.parseInt(br.readLine());
 	}
 	
 	public String getName() {
