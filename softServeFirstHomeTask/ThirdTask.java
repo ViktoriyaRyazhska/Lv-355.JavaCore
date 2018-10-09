@@ -23,7 +23,7 @@ public class ThirdTask {
 		double c3 = Double.parseDouble(mt.readLine());
 		double costThird = t3 * c3;
 		System.out.println("Cost is " + costThird);
-		double toatlCost = (int) (cost + costSecond + costThird);
+		double toatlCost = cost + costSecond + costThird;
 		System.out.println("Total cost is: " + toatlCost );
 	
 	}
