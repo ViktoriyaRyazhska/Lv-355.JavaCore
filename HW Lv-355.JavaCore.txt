@@ -1,9 +1,10 @@
-            HW1
+            HW1   HW2
+           Basic Class
 Semenyuk D   +
 Yarmoshyk V  +
 Shyian A     +
-Topolevs'kyi 
+Topolevs'kyi + 
 Slobodian D
-Yadelskyi A  +
+Yadelskyi A  +    +
 Hlynsky D    +
 
