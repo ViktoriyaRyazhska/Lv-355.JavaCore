@@ -1,14 +1,14 @@
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
+import java.time.LocalDate;
+
+
 
 public class Person {
 	private String name;
 	private int birthYear;
-	Calendar c = new GregorianCalendar();
+	LocalDate today = LocalDate.now();
 	
 	public Person(String name, int birthYear) {
 		this.name = name;
@@ -35,10 +35,11 @@ public class Person {
 	}
 
 	public int age() {
-		return this.birthYear = c.get(Calendar.YEAR) - birthYear;
+		return this.birthYear = today.getYear() - birthYear;
+				//Calendar.getInstance().get(Calendar.YEAR) - birthYear;
 		  
 	}
-
+	
 	public void input(BufferedReader br) throws IOException {
 
 	System.out.println("Ваше імя?");

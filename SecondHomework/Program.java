@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+import java.time.LocalDate;
 
 /**
  * @author User
@@ -10,10 +10,13 @@ import java.io.InputStreamReader;
 public class Program {
 
 	public static void main(String[] args) throws IOException {
-		int i;
+		// LocalDate today = LocalDate.now();
+		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
 		Person m1 = new Person();
-		m1.input(br);
+		m1.setBirthYear(1993);
+		m1.setName("Orest");
 		
 		Person m2 = new Person();
 		m2.input(br);
@@ -29,17 +32,17 @@ public class Program {
 
 		//Object[] Person = new Person[5];
 		//Person [0] = new Person();
-			//	Person [1] = new Person();
-					//	Person [2] = new Person();
-					//			Person [3] = new Person();
-					//					Person [4] = new Person();
+		//		Person [1] = new Person();
+			//			Person [2] = new Person();
+			//					Person [3] = new Person();
+			//							Person [4] = new Person();
 		 
 	
 		
 		//for (i=0; i<5; i++) {
 		//	System.out.println(Person[i]);
 	//	}
-		System.out.println(m1);
+		System.out.println(m1.age());
 		System.out.println(m2);
 		System.out.println(m3);
 		System.out.println(m4);
