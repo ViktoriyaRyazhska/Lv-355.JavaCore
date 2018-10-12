@@ -1,18 +1,20 @@
+import java.time.LocalDate;
+import java.time.Period;
 
 public class Person {
 
 	private int burthYear;
 	private String name;
-	private static int age;
+	
 
 	public Person(String name, int burthYear) {
 		this.name = name;
 		this.burthYear = burthYear;
-		age = 2018 - burthYear;
+		// age = 2018 - burthYear;
 	}
 
 	public Person() {
-		age = 2018 - burthYear;
+		// age = 2018 - burthYear;
 	}
 
 	public int getBurthYear() {
@@ -20,9 +22,9 @@ public class Person {
 	}
 
 	public void setBurthYear(int burthYear) {
-		age = 2018 + this.burthYear;
+		// age = 2018 + this.burthYear;
 		this.burthYear = burthYear;
-		age = 2018 - burthYear;
+		// age = 2018 - burthYear;
 	}
 
 	public String getName() {
@@ -33,20 +35,13 @@ public class Person {
 		this.name = name;
 	}
 
+	public int calCAge() {
+		return LocalDate.now().getYear() - burthYear;
+	}
+
 	@Override
 	public String toString() {
-		return "Name: " + name + " Burth Year: " + burthYear + " Age: " + age;
+		return "Name: " + name + " Burth Year: " + burthYear;
 	}
 
-	public void changeName(String oldName, String newName) {
-		if (name.equalsIgnoreCase(oldName)) {
-			System.out.println("Did not provide current account holder's name");
-		} else {
-			System.out.println("Invalid name");
-		}
-
-		if (!newName.equalsIgnoreCase(oldName)) {
-			oldName.replaceAll(oldName, newName);
-		}
-	}
 }
