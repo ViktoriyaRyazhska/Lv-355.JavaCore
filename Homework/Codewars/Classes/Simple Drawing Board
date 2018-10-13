@@ -1,0 +1,98 @@
+package com.swich.test;
+
+class Canvas {
+
+    private int width;
+    private int height;
+
+    private StringBuilder canvas;
+
+
+    public Canvas(int width, int height) {
+        this.width = width;
+        this.height = height;
+
+        this.canvas = new StringBuilder();
+        for (int i = 0; i < this.height + 2; i++) {
+            for (int j = 0; j < this.width + 2; j++) {
+                char c = ' ';
+                if (i == 0 || i == this.height + 1) {
+                    c = '-';
+                } else if (j == 0 || j == this.width + 1) {
+                    c = '|';
+                }
+                this.canvas.append(c);
+            }
+            this.canvas.append('\n');
+        }
+    }
+
+    public Canvas draw(int x1, int y1, int x2, int y2) {
+
+        if (x1 == x2){
+            for (int i = Math.min(y1, y2); i <= Math.max(y1, y2); i++) {
+                setXY(x1, i, 'x');
+            }
+        }else if (y1 == y2){
+            for (int i = Math.min(x1, x2); i <= Math.max(x1, x2); i++) {
+                setXY(i, y1, 'x');
+            }
+        }else {
+
+            for (int i = Math.min(x1, x2); i <= Math.max(x1, x2); i++) {
+                setXY(i, Math.min(y1, y2), 'x');
+                setXY(i, Math.max(y1, y2), 'x');
+            }
+
+            for (int i = Math.min(y1, y2); i <= Math.max(y1, y2); i++) {
+                setXY(Math.min(x1, x2), i, 'x');
+                setXY(Math.max(x1, x2), i, 'x');
+            }
+
+        }
+
+        return this;
+    }
+
+    public Canvas fill(int x, int y, char ch) {
+
+        char xy = atXY(x, y);
+        setXY(x, y, ch);
+
+        if (x > 0 && atXY(x - 1, y) == xy) {
+            fill(x - 1, y, ch);
+        }
+
+        if (x < this.width - 1 && atXY(x + 1, y) == xy) {
+            fill(x + 1, y, ch);
+        }
+
+        if (y > 0 && atXY(x, y - 1) == xy) {
+            fill(x, y - 1, ch);
+        }
+
+        if (y < this.height - 1 && atXY(x, y + 1) == xy) {
+            fill(x, y + 1, ch);
+        }
+
+        return this;
+    }
+
+    private int index(int x, int y) {
+        x++;
+        y++;
+        return x + y * (this.width + 3);
+    }
+
+    private char atXY(int x, int y) {
+        return this.canvas.charAt(index(x, y));
+    }
+
+    private void setXY(int x, int y, char c) {
+        this.canvas.setCharAt(index(x, y), c);
+    }
+
+    public String drawCanvas() {
+        return this.canvas.toString();
+    }
+}
