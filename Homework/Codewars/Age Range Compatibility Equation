@@ -3,9 +3,9 @@ public class Kata{
     if (age > 14) {
         return (age / 2 + 7) + "-" + ((age - 7) * 2);
     }
-    int min = (int) Math.round(age - 0.10 * age);
-    int max = (int) Math.round(age + 0.10 * age);
+    double min = age - 0.10 * age;
+    double max = age + 0.10 * age;
 
-    return min + "-" + max;
+    return (int)min + "-" + (int)max;
   }
 }
