@@ -1,0 +1,14 @@
+public class Kata {
+  public static String declareWinner(Fighter f1, Fighter f2, String f) {
+    while(f1.health > 0 && f2.health > 0){
+      if(f1.name == f){
+        f2.health -= f1.damagePerAttack;
+        f = f2.name;
+      }else{
+        f1.health -= f2.damagePerAttack;
+        f = f1.name;
+      }
+    }
+    return f1.health > 0 ? f1.name : f2.name;
+  }
+}
