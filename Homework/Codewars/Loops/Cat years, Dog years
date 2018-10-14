@@ -1,0 +1,20 @@
+public class Dinglemouse {
+
+  public static int[] humanYearsCatYearsDogYears(final int humanYears) {
+    int[] y = {humanYears, 0, 0};
+    for(int i=1; i <= humanYears; i++){
+      if(i == 1){
+        y[1] += 15;
+        y[2] += 15;
+      }else if(i == 2){
+        y[1] += 9;
+        y[2] += 9;
+      }else{
+        y[1] += 4;
+        y[2] += 5;
+      }
+    }
+    return y;
+  }
+
+}
