@@ -1,0 +1,25 @@
+public class TwiceAsOld{
+
+  public static int TwiceAsOld(int dadYears, int sonYears){
+    int i = 0;
+    boolean t = true;
+    if(dadYears / 2 > sonYears){
+      t = false;
+    }
+    while(true){
+      i++;
+      if(dadYears == sonYears * 2){
+        i--;
+        break;
+      }
+      if(t){
+        dadYears--;
+        sonYears--;
+      }else{
+        dadYears++;
+        sonYears++;
+      }
+    }
+    return Math.abs(i);
+  }
+}
