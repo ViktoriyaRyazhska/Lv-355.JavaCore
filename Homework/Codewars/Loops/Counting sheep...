@@ -1,0 +1,11 @@
+public class Counter {
+  public int countSheeps(Boolean[] a) {
+    int c = 0;
+    for (int i = 0; i < a.length; i++){
+      if (a[i] != null && a[i]){
+        c++;
+      }
+    }
+    return c;
+  }
+}
