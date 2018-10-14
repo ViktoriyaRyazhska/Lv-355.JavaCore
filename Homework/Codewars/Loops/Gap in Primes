@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+
+class GapInPrimes {
+
+    public static int[] gap(int g, int m, int n) {
+
+        ArrayList<Integer> p = new ArrayList<>();
+
+        for (int i = m; i <= n; i++){
+            if(prime(i)){
+                p.add(i);
+            }
+        }
+
+        for (int i = 0; i < p.size(); i++){
+            for (int j = 0; j < p.size(); j++){
+
+                if(p.get(i) - p.get(j) == g){
+                    return new int[] {p.get(j), p.get(i)};
+                }
+            }
+        }
+        return null;
+
+    }
+
+    private static boolean prime(int n) {
+
+        int remainder;
+        boolean isPrime = true;
+
+        for (int i = 2; i <= n / 2; i++) {
+            remainder = n % i;
+
+            if (remainder == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        return isPrime;
+
+    }
+
+
+}
