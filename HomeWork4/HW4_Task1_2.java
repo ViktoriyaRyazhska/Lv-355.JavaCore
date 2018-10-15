@@ -17,9 +17,9 @@ public class HW4_Task1_2 {
 		}
 		if (b > a && b > c) {
 			return b;
-		} else {
+		} 
 			return c;
-		}
+		
 	}
 
 	public int  MinEl(int a, int b, int c) {
@@ -28,8 +28,8 @@ public class HW4_Task1_2 {
 		}
 		if (b < a && b < c) {
 			return  b;
-		} else {
+		} 
 			return  c;
-		}
+		
 	}
 }

@@ -12,14 +12,15 @@ public class HM4_Task1_1 {
 		}
 		for (int i = 0; i < a.length; i++) {
 			System.out.println(a[i]);
-			IN(a);
+			
 		}
+              IN(a);
 	}
 
 	public static void IN(float a[]) {
 		System.out.println("Numbers that are less than 5 and more than -5:");
 		for (int i = 0; i < a.length; i++) {
 			if (a[i] > -5 && a[i] < 5) {
-				System.out.println(+a[i]);
+				System.out.println(a[i]);
 			}
 		}}}
