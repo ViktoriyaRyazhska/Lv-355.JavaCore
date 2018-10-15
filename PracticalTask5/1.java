@@ -32,13 +32,13 @@ public class Practical {
 	}
 
 	public int TheSumOfPositive(int[] massive) {
-		int m = massive[0];
+		int m = 0;
 		for (int i = 0; i < massive.length; i++) {
 			if (massive[i] > 0) {
 				m += massive[i];
 			}
 		}
-		return m - massive[0];
+		return m;
 
 	}
 

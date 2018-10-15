@@ -62,7 +62,6 @@ public class Employee {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter the number of department");
 		int dep = Integer.parseInt(reader.readLine());
-		Employee n = employee[0];
 		for (int i = 0; i < employee.length; i++) {
 			if (dep == employee[i].getDepartment()) {
 				System.out.println(employee[i]);
