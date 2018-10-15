@@ -7,9 +7,14 @@ import java.io.InputStreamReader;
 public class ex3 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("Error (chose from:400, 401, 402, 403, 404):");
+		System.out.println("Error (chose from: 400, 401, 402, 403, 404):");
 		int error = Integer.parseInt(br.readLine());
+		
 		HTTPError errorName = null;
+		System.out.println(errorMethod(error, errorName));
+	}
+	
+	public static HTTPError errorMethod(int error, HTTPError errorName) {
 		switch (error) {
 		case 400:
 			errorName = HTTPError.BadRequest;
@@ -25,9 +30,8 @@ public class ex3 {
 			break;
 		case 404:
 			errorName = HTTPError.NotFound;
-			System.out.println("Sorry, but we do not have this error in our base.");
-			System.exit(0);
+			break;
 		}
-		System.out.println(errorName);
+		return errorName;
 	}
 }
