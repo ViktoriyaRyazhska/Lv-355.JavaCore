@@ -1,0 +1,36 @@
+public class CodeWarsMath {
+  public static int nearestSq(final int n){
+    int l = 0;
+    int r = 0;
+    int m = n;
+    int k = n;
+    while(true){
+      l++;
+      if((int)Math.sqrt(m) * (int)Math.sqrt(m) == m){
+        break;
+      }
+      m++;
+    }
+    while(true){
+      r++;
+      if(k < 0){
+        k = -1;
+        break;
+      }
+      if((int)Math.sqrt(k) * (int)Math.sqrt(k) == k){
+        break;
+      }
+      k--;
+    }
+    
+    if(k == -1){
+      return m;
+    }
+    
+    if(l < r){
+      return m;
+    }else{
+      return k;
+    }
+  }
+}
