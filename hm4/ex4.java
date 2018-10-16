@@ -16,7 +16,6 @@ public class ex4 {
 			a = Integer.parseInt(br.readLine());
 		}
 		System.out.println(product);
-//		Other variant:
 //		int array[] = new int[20];	
 //		int product=1;
 //		for (int i = 0; i < array.length; i++) {

@@ -12,6 +12,7 @@ public class ex2 {
 		for (int i = 0; i < array.length; i++) {
 			array[i] = Integer.parseInt(br.readLine());
 		}
+
 		int amount = 0;
 		int sum = 0;
 		int product = 1;
@@ -23,6 +24,7 @@ public class ex2 {
 				for (int f = 5; f < array.length; f++) {
 					product = product * array[f];
 				}
+				break;
 			}
 		}
 		if (amount == 5) {
