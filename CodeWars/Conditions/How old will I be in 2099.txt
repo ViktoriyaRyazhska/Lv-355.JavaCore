@@ -1,0 +1,20 @@
+public class AgeDiff {
+  public static String CalculateAge(int birth, int yearTo) {
+  
+  if (yearTo>birth+2) {
+   return "You are " + (yearTo-birth) + " years old.";
+  }
+  else if (yearTo==birth+1) {
+  return "You are 1 year old.";
+  }
+  else if (yearTo<birth-2){
+  return "You will be born in " + (birth-yearTo) + " years.";
+  }
+   else if (yearTo==birth-1){
+  return "You will be born in 1 year.";
+  }
+  else {
+  return"You were born this very year!";
+  }
+  }
+}
