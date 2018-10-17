@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Car {
+	BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 	private String type;
 	private int yearOfPr;
 	private int engineCapacity;
@@ -41,8 +42,7 @@ public class Car {
 		this.engineCapacity = engineCapacity;
 	}
 
-	public String NOF(Car[] car) throws IOException {
-		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+	public  void  NOF(Car[] car) throws IOException {
 		System.out.println("Enter the year");
 		int a = Integer.parseInt(reader.readLine());
 		for (int i = 0; i < car.length; i++) {
@@ -51,7 +51,6 @@ public class Car {
 			}
 
 		}
-		return " ";
 	}
 
 	public String toString() {
@@ -62,7 +61,7 @@ public class Car {
 		Car c = new Car();
 		Car[] car = { new Car("Ford", 2016, 300), new Car("BMW", 2013, 500), new Car("Nissan", 2018, 550),
 				new Car("Lamborgini", 2011, 400) };
-		System.out.println(c.NOF(car));
+		c.NOF(car);
 		Car r;
 		for (int i = 0; i < car.length - 1; i++) {
 			for (int j = i + 1; j < car.length; j++) {
