@@ -1,0 +1,31 @@
+public class Block {
+	private int[] n = new int[3];
+
+	public Block(int[] n) {
+		for (int i = 0; i < n.length; i++) {
+			this.n[i] = n[i];
+
+		}
+		;
+	}
+
+	int getWidth() {
+		return n[0];
+	}
+
+	int getLength() {
+		return n[1];
+	}
+
+	int getHeight() {
+		return n[2];
+	}
+
+	int getVolume() {
+		return n[0] * n[1] * n[2];
+	}
+
+	int getSurfaceArea() {
+		return 2 * n[1] * n[2] + 2 * n[2] * n[0] + 2 * n[1] * n[0];
+	}
+}
