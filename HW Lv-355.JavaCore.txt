@@ -1,10 +1,10 @@
-            HW1   HW2     HW3      HW4
-           Basic Class Conditions Loops
-Semenyuk D   +     +       +        .
+            HW1   HW2     HW3      HW4   HW5
+           Basic Class Conditions Loops  OOP
+Semenyuk D   +     +       +        +
 Yarmoshyk V  +     +       +        +
-Shyian A     +     +       +        +
+Shyian A     +     +       +        +     +
 Topolevs'kyi +     +       +        + 
 Slobodian D  +     +       +
 Yadelskyi A  +     +       +        +
-Hlynsky D    +     +       +        +
+Hlynsky D    +     +       +        +     .
 
