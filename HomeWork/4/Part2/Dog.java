@@ -77,20 +77,53 @@ public class Dog {
 
 	public static void main(String[] args) {
 
-		Dog d1 = new Dog("Тузік", 1, "Big");
-		Dog d2 = new Dog("Шарік", 12, "Small");
-		Dog d3 = new Dog("Кабанчик", 3, "Midle");
-
-		if (d1.getAge() > d2.getAge() && d1.getAge() > d3.getAge()) {
-			System.out.println(d1);
-		} else if (d2.getAge() > d1.getAge() && d2.getAge() > d3.getAge()) {
-			System.out.println(d2);
-		} else if (d3.getAge() > d1.getAge() && d3.getAge() > d2.getAge()) {
-			System.out.println(d3);
+		Dog[] var = new Dog[3];
+		var[0] = new Dog("Тузік", 1, "Big");
+		var[1] = new Dog("Тузік", 12, "Small");
+		var[2] = new Dog("Кабанчик", 3, "Midle");
+		compare (var);
+		for (int i = 0; i < var.length; i++) {
+			System.out.println(var[i]);
 		}
+	}
+
+	public static void names(Dog[] k) {
+		if (k[0].getName().equals(k[1].getName())) {
+			System.out.println(k[0]);
+		} else if (k[1].getName().equals(k[2].getName())) {
+			System.out.println(k[1]);
+		}
+	}
+
+	public static void compare(Dog[] k) {
+		Dog per;
+
+		for (int i = 0; i < k.length - 1; i++) {
+
+			for (int j = i + 1; j < k.length; j++) {
+
+				if (k[i].getAge() < k[j].getAge()) {
+
+					per = k[i];
+
+					k[i] = k[j];
+
+					k[j] = per;
+				}
+			}
+		}
+	}
+
+}
+
+//		if (d1.getAge() > d2.getAge() && d1.getAge() > d3.getAge()) {
+//			System.out.println(d1);
+//		} else if (d2.getAge() > d1.getAge() && d2.getAge() > d3.getAge()) {
+//			System.out.println(d2);
+//		} else if (d3.getAge() > d1.getAge() && d3.getAge() > d2.getAge()) {
+//			System.out.println(d3);
+//		}
 
 //		System.out.println(d1.equals(d2)&&d1.equals(d3));
 //		System.out.println(d2);
 //		System.out.println(d3);
-	}
-}
