@@ -1,23 +1,30 @@
 
-public class ContractEmployee  extends Employee  implements Inta{
-private int fixedMonthlyPayment;
-private String name;
-private String employeeId;
-public ContractEmployee() {
-	
-}
-public ContractEmployee(String name,String employeeId,int fixedMonthlyPayment) {
-	this.name = name;
-	this.employeeId = employeeId;
-	this.fixedMonthlyPayment = fixedMonthlyPayment;
-}
-	@Override
-	public int calculatePay() {
-		return fixedMonthlyPayment;
-	}
-	public String toString() {
-		return  "Name:"+" "+name +"."+" "+"ID"+" "+employeeId;
-		
+public class ContractEmployee extends Employee implements InFa {
+	private int fixedMounthlyPayment;
+	private boolean federalTaxIdMember;
+	public ContractEmployee() {
+
 	}
 
-}
+	public ContractEmployee(int fixedMounthlyPayment, boolean federalTaxIdMember) {
+		this.fixedMounthlyPayment = fixedMounthlyPayment;
+		this.federalTaxIdMember = federalTaxIdMember;
+
+	}
+
+	@Override
+	public int calculatePay() {
+		return fixedMounthlyPayment;
+	}
+
+	public String toString() {
+		if(federalTaxIdMember==false) {
+			System.out.println("Person can not work here, because you must have be federal tax id member!");
+		}
+		else {
+		return "Is person  federal tax Id member? " + federalTaxIdMember;
+		}
+		return "";
+	}
+	}
+
