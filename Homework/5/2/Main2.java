@@ -24,12 +24,18 @@ public class Main2 {
                 }
             }
         }
+        
+        double avr = 0;
 
         for (Employee employee : employees){
             System.out.println(employee);
             System.out.println("Name: " + employee.getName() + " ID: " + employee.getEmployeeId());
             System.out.println("Payment: " + employee.calculatePay());
+            avr += employee.calculatePay();
         }
+        
+        avr /= (double)employees.length;
+        System.out.println("Average payment: " + avr);
 
     }
 
