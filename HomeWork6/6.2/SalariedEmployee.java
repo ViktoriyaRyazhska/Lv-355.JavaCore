@@ -1,5 +1,5 @@
 
-public class SalariedEmployee extends Employee implements InFa {
+public class SalariedEmployee extends Employee  {
 	private int hourlyrate;
 	private int numberofHoursWorked;
 	private String socialSecurityNumber;

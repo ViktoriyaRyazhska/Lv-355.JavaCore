@@ -3,7 +3,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		Employee[] g = { new SalariedEmployee(30, 54, "7"), new SalariedEmployee(53, 54, "32"),
-				new ContractEmployee(6000, false), new ContractEmployee(4000, false) };
+				new ContractEmployee(6000, true), new ContractEmployee(4000, false) };
 		g[0].setName("Andrii");
 		g[0].setEmployeeId("3");
 		g[1].setName("Nataly");

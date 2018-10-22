@@ -1,5 +1,5 @@
 
-public class Employee implements InFa {
+public abstract class Employee implements InFa {
 	private String employeeId;
 	private String name;
 
@@ -19,10 +19,5 @@ public class Employee implements InFa {
 		this.employeeId = employeeId;
 	}
 
-	@Override
-	public int calculatePay() {
-		return 0;
-
-	}
 
 }

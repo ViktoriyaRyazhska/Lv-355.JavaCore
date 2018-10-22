@@ -1,7 +1,8 @@
 
-public class ContractEmployee extends Employee implements InFa {
+public class ContractEmployee extends Employee {
 	private int fixedMounthlyPayment;
 	private boolean federalTaxIdMember;
+
 	public ContractEmployee() {
 
 	}
@@ -18,13 +19,12 @@ public class ContractEmployee extends Employee implements InFa {
 	}
 
 	public String toString() {
-		if(federalTaxIdMember==false) {
-			System.out.println("Person can not work here, because you must have be federal tax id member!");
-		}
-		else {
-		return "Is person  federal tax Id member? " + federalTaxIdMember;
+		if (federalTaxIdMember) {
+			System.out.println("Is person  federal tax Id member? " + federalTaxIdMember);
+		} else {
+			return ("Person can not work here, because you must have be federal tax id member!");
+
 		}
 		return "";
 	}
-	}
-
+}
