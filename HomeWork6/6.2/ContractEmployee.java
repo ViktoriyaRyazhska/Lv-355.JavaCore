@@ -20,11 +20,8 @@ public class ContractEmployee extends Employee {
 
 	public String toString() {
 		if (federalTaxIdMember) {
-			System.out.println("Is person  federal tax Id member? " + federalTaxIdMember);
-		} else {
+			return "Is person  federal tax Id member? " + federalTaxIdMember;
+		} 
 			return ("Person can not work here, because you must have be federal tax id member!");
-
-		}
-		return "";
 	}
 }
