@@ -10,14 +10,14 @@ public class Homework53 {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int[] inputtedNumber = new int[5];
-		int min = inputtedNumber[0];
+		int min = Integer.MAX_VALUE;
 		int imin = 0;
 		int pos = inputtedNumber[0];
 		int ipos = 0;
 		int i;
 		int even = 0;
 		for (i = 0; i < inputtedNumber.length; i++) {
-			System.out.println("Ââåä³òü ÷èñëî: ");
+			System.out.println("Ã‚Ã¢Ã¥Ã¤Â³Ã²Ã¼ Ã·Ã¨Ã±Ã«Ã®: ");
 			inputtedNumber[i] = Integer.parseInt(br.readLine());
 
 			if (inputtedNumber[i] < min) {
@@ -26,7 +26,7 @@ public class Homework53 {
 			}
 
 //			if (inputtedNumber[i] < 0) {
-//				System.out.println("Ò³ëüêè äîäàòí³ ÷èñëà");
+//				System.out.println("Ã’Â³Ã«Ã¼ÃªÃ¨ Ã¤Ã®Ã¤Ã Ã²Ã­Â³ Ã·Ã¨Ã±Ã«Ã ");
 //				break;
 //			}
 
@@ -42,8 +42,8 @@ public class Homework53 {
 				}
 			}
 		}
-		System.out.println("Ê³ëüê³ñòü ïàğíèõ ÷èñåë " + even);
-		System.out.println("Ïîçèö³ÿ 2-ãî äîäàòüîãî ÷èñëà " + ipos);//// ??? Íå âèõîäèòü âèçíà÷èòè ïîçèöûş 2-ãî äîäàòíüîãî ÷èñëà
-		System.out.println("Ì³í³ìàëüíå ÷èñëî: " + min + "\tÉîãî ïîçèö³ÿ: " + (imin + 1));
+		System.out.println("ÃŠÂ³Ã«Ã¼ÃªÂ³Ã±Ã²Ã¼ Ã¯Ã Ã°Ã­Ã¨Ãµ Ã·Ã¨Ã±Ã¥Ã« " + even);
+		System.out.println("ÃÃ®Ã§Ã¨Ã¶Â³Ã¿ 2-Ã£Ã® Ã¤Ã®Ã¤Ã Ã²Ã¼Ã®Ã£Ã® Ã·Ã¨Ã±Ã«Ã  " + ipos);//// ??? ÃÃ¥ Ã¢Ã¨ÃµÃ®Ã¤Ã¨Ã²Ã¼ Ã¢Ã¨Ã§Ã­Ã Ã·Ã¨Ã²Ã¨ Ã¯Ã®Ã§Ã¨Ã¶Ã»Ã¾ 2-Ã£Ã® Ã¤Ã®Ã¤Ã Ã²Ã­Ã¼Ã®Ã£Ã® Ã·Ã¨Ã±Ã«Ã 
+		System.out.println("ÃŒÂ³Ã­Â³Ã¬Ã Ã«Ã¼Ã­Ã¥ Ã·Ã¨Ã±Ã«Ã®: " + min + "\tÃ‰Ã®Ã£Ã® Ã¯Ã®Ã§Ã¨Ã¶Â³Ã¿: " + (imin + 1));
 	}
 }
