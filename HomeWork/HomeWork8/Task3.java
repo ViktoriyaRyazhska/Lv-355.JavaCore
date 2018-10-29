@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class Task3 {
 
 	public static void main(String[] args) throws IOException {
-		String pattern = "\\$(\\d+\\.)+\\d+{4,15}";
+		String pattern = "\\$\\d+\\.\\d{0,2}";
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		String[] numbers = new String[3];
 		for (int i = 0; i < numbers.length; i++) {
