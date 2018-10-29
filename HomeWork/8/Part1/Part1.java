@@ -8,8 +8,8 @@ public class Part1 {
 		String str = null;
 		char[] temparray = arr[1].toCharArray();
 //		char[] temparray = s1.toCharArray();
-		int left, right = 0;
-		right = temparray.length - 1;
+		int left = 0;
+		int right = temparray.length - 1;
 
 		for (left = 0; left < right; left++, right--) {
 			char temp = temparray[left];
