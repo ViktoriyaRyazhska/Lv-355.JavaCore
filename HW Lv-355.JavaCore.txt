@@ -2,7 +2,7 @@
            Basic Class Conditions Loops  OOP Collections String Exception
 Semenyuk D   +     +       +        +     +      +         +
 Yarmoshyk V  +     +       +        +     +      +         +       +
-Shyian A     +     +       +        +     +      +         +
+Shyian A     +     +       +        +     +      +         +       +
 Topolevs'kyi +     +       +        +     . 
 Slobodian D  +     +       +        +     +
 Yadelskyi A  +     +       +        +     +      +
