@@ -1,6 +1,6 @@
             HW1   HW2     HW3      HW4   HW5    HW6       HW7     HW8
            Basic Class Conditions Loops  OOP Collections String Exception
-Semenyuk D   +     +       +        +     +      +         +
+Semenyuk D   +     +       +        +     +      +         +       +
 Yarmoshyk V  +     +       +        +     +      +         +       +
 Shyian A     +     +       +        +     +      +         +       +
 Topolevs'kyi +     +       +        +     . 
