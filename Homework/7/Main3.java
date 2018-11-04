@@ -12,7 +12,7 @@ public class Main3 {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        Pattern p = Pattern.compile("\\$\\d+\\.\\d{2}");
+        Pattern p = Pattern.compile("\\$\\d+(\\.\\d{2}){0,1}");
         Matcher m;
 
         for (int i = 0; i < 3; i++) {
