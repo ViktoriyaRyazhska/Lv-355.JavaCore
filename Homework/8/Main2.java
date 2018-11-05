@@ -8,14 +8,14 @@ public class Main2 {
 
     private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args){
 
         int n;
         for (int i = 0; i < 10; i++) {
             try {
                 n = readNumber(1, 100);
                 System.out.println(n);
-            }catch (NumberFormatException e){
+            }catch (IOException e){
                 e.printStackTrace();
             }
         }
