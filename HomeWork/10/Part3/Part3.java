@@ -7,7 +7,7 @@ public class Part3 {
 		
 		t1.start();
 		t1.join();
-		t1.t2.start();
+		//t1.t2.start();
 	}
 
 }
