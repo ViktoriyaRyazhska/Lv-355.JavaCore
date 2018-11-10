@@ -18,10 +18,7 @@ public class weather {
 		String url = "https://sinoptik.ua/%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0-%D0%BB%D1%8C%D0%B2%D0%BE%D0%B2";
 		Document page = Jsoup.parse(new URL(url), 3000);
 		return page;
-	}
-
-	private static Pattern pattern;
-	
+	}	
 	private static String rebuildString(String s) {
 		s = s.replaceAll("\\s+", " ");
 		s = s.replaceAll(" :", ":");
@@ -33,10 +30,12 @@ public class weather {
 		int i = 0;
 		String[] mas = new String[7];
 		String[] words = s.split(" ");
+		words[0] = "0" + words[0];
+		words[1] = "0" + words[1];
 		String value = "";
 		for (String word : words) {
 			if(count < 8) {
-				value += word + " ";
+				value += String.format("%6s", word);
 				count++;
 			}if(count == 8) {
 				mas[i] = value;
@@ -45,13 +44,29 @@ public class weather {
 				value = "";
 			}
 		}
-		return mas;
 		
+		return mas;	
 	}
+	
+	private static String partsDay(String s) {
+		String last= "";
+		int count = 0;
+		String[] mas = s.split(" ");
+		for (String string : mas) {
+			count++;
+			if(count == 4) {
+				last += String.format("%9s", string) + "   ";
+			}
+			else last += String.format("%9s", string) + "   ";
+		}
+		return last;
+	}
+	
+	
 	
 	// отримую дату(але неправильно)
 	private static String getYearFromString() throws Exception {
-		pattern = Pattern.compile("\\d{4}");
+		Pattern pattern = Pattern.compile("\\d{4}");
 		LocalDate localDate = LocalDate.now();
 		String ld = (localDate + "");
 		Matcher matcher = pattern.matcher(ld);
@@ -76,9 +91,11 @@ public class weather {
 		for (Element day : dates) {
 			String date = day.select("p").text();
 			System.out.println(date + " " + getYearFromString()); // Суббота 10 ноября 2018
+			System.out.println();
 
 			for (Element part : partOfDay) {
 				String parts = part.select("td").text();
+				parts = partsDay(parts);
 				System.out.println(parts);			//ночь утро день вечер
 				for (Element info : infoValues) {
 					String value = info.select("tr").text();
@@ -89,7 +106,7 @@ public class weather {
 					}
 				}
 			}
-			System.out.println();
+			System.out.println("------------------------------------------------");
 		}
 	}
 
