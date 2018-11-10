@@ -64,7 +64,7 @@ public class weather {
 	
 	
 	
-	// отримую дату(але неправильно)
+	//get Date, but wrong
 	private static String getYearFromString() throws Exception {
 		Pattern pattern = Pattern.compile("\\d{4}");
 		LocalDate localDate = LocalDate.now();
@@ -87,22 +87,22 @@ public class weather {
 		Elements infoValues = tableWth.select("tbody");
 
 
-		// основний вивід
+		// Main output
 		for (Element day : dates) {
 			String date = day.select("p").text();
-			System.out.println(date + " " + getYearFromString()); // Суббота 10 ноября 2018
+			System.out.println(date + " " + getYearFromString()); // Date
 			System.out.println();
 
 			for (Element part : partOfDay) {
 				String parts = part.select("td").text();
 				parts = partsDay(parts);
-				System.out.println(parts);			//ночь утро день вечер
+				System.out.println(parts);			//The part of a day
 				for (Element info : infoValues) {
 					String value = info.select("tr").text();
 					value = rebuildString(value);
 					mas = infoString(value);
 					for (String ss : mas) {
-						System.out.println(ss);//все остальные данные
+						System.out.println(ss);//other info
 					}
 				}
 			}
