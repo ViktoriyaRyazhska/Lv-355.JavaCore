@@ -21,7 +21,7 @@ public class Task2 {
 			System.out.print(n);
 	}
 
-	public static void main(String[] args) throws Exception, IOException {
+	public static void start() throws Exception, IOException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter numbers: ");

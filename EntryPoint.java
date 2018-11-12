@@ -1,4 +1,6 @@
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class EntryPoint {
 
@@ -6,35 +8,61 @@ public class EntryPoint {
 	public static void main(String[] args) {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int myExit = 1;
+		int exit = 1;
+		do {
 					System.out.println();
 			System.out.println("Enter the number of task (1-14). 0 - in case of exit:");
-			int choise=1;
+			int choise = 0;
+			
 			try {
 				choise = Integer.parseInt(br.readLine());
 			} catch (NumberFormatException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
-			myExit = choise;
+			exit = choise;
 				System.out.println();
 			
 			switch (choise) {
 			case 1:
 				System.out.println("Task 1:");
-				Task1.start();
+				try {
+					Task1.start();
+				} catch (NumberFormatException e) {
+					
+					e.printStackTrace();
+				} catch (IOException e) {
+					
+					e.printStackTrace();
+				}
 				break;
 			
 			case 2:
 				System.out.println("Task 2:");
-				Task2.start();
+				try {
+					Task2.start();
+				} catch (IOException e) {
+					
+					e.printStackTrace();
+				} catch (Exception e) {
+					
+					e.printStackTrace();
+				}
 				break;
 			case 3:
 				System.out.println("Task 3:");
-				Task3.start();
+				try {
+					Task3.start();
+				} catch (NumberFormatException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				break;
 			case 4:
 				System.out.println("Task 4:");
@@ -42,19 +70,45 @@ public class EntryPoint {
 				break;
 			case 5:
 				System.out.println("Task 5:");
-				Task5.start();
+				try {
+					Task5.start();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				break;
 			case 6:
 				System.out.println("Task 6:");
-				Task6.start();
+				try {
+					Task6.start();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				break;
 			case 7:
 				System.out.println("Task 7:");
-				Task7.start();
+				try {
+					Task7.start();
+				} catch (NumberFormatException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				break;
 			case 8:
 				System.out.println("Task 8:");
-				Task8.start();
+				try {
+					Task8.start();
+				} catch (NumberFormatException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				break;
 			case 9:
 				System.out.println("Task 9:");
@@ -78,12 +132,17 @@ public class EntryPoint {
 				break;
 			case 14:
 				System.out.println("Task 14:");
-				Task14.start();
+				System.out.println("ooops");
 				break;
 			default:
-				System.out.println("We have only 14 tasks");
+				System.out.println("Thank you! Have a great day!");
 				break;
 			}
 		}
+			while (exit != 0);
+			
+		}
 }
+
+
 	

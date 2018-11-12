@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 public class Task4 {
 
-	public static void main(String[] args) {
+	public static void start() {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		String line = null;
 		try {
@@ -17,7 +17,7 @@ public class Task4 {
 		
 		}
 		int zero=0;
-		Pattern p = Pattern.compile("[aeijuyo]");
+		Pattern p = Pattern.compile("[aeiuyo]");
 		Matcher m = p.matcher(line);
 		for(int i = 0;i<line.length();i++) {
 		if(m.find()) {

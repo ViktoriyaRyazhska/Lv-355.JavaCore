@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 
 public class Task7 {
 
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void start() throws NumberFormatException, IOException {
 	BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 	int a = Integer.parseInt(reader.readLine());
 	int b = 1;

@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Task9 {
-	public static void main(String[] args) {
+	public static void start() {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		int a=0;
 		try {
