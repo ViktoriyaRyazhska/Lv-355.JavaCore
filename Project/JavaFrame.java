@@ -82,7 +82,7 @@ public class JavaFrame {
 		about.add(new JMenuItem("About")).addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(jPanel, "Program: XvsO \n Version: 00.00.02 \n \u00a9 Danylo Hlynsky", "About program", JOptionPane.CANCEL_OPTION);
+				JOptionPane.showMessageDialog(jPanel, "Program: XvsO \n Version: 0.0.04 \n \u00a9 Danylo Hlynsky", "About program", JOptionPane.CANCEL_OPTION);
 			}
 		});
 
@@ -108,4 +108,18 @@ public class JavaFrame {
 			clickCount = 0;
 		}
 	}
+//	public static void windowCloser()  {
+//		jFrame.addWindowListener(new WindowAdapter() {
+//			@Override
+//			public void windowClosing(WindowEvent we) {
+//				String ObjButtons[] = { "Yes", "No" };
+//				int PromptResult = JOptionPane.showOptionDialog(null, "Are you sure you want to exit?",
+//						"Online Examination System", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,
+//						null, ObjButtons, ObjButtons[1]);
+//				if (PromptResult == JOptionPane.YES_OPTION) {
+//					System.exit(0);
+//				}
+//			}
+//		});
+//	}
 }

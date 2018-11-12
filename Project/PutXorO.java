@@ -14,5 +14,4 @@ public class PutXorO {
 		JavaFrame.clickCount++;
 		jButton.setEnabled(false);
 	}
-
 }

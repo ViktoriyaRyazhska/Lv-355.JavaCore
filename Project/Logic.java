@@ -58,15 +58,16 @@ public class Logic {
 			tryAgain();
 		}
 		if ((jButtons[2].getText().equals(jButtons[4].getText()))
-				&& (jButtons[2].getText().equals(jButtons[8].getText())) && (!jButtons[2].getText().isEmpty())) {
+				&& (jButtons[2].getText().equals(jButtons[6].getText())) && (!jButtons[2].getText().isEmpty())) {
 			answer = JOptionPane.showConfirmDialog(JavaFrame.jPanel,
 					"Player " + jButtons[2].getText() + " is winner! Do u want to exit?", "Congradulation!",
 					JOptionPane.YES_NO_OPTION);
 			tryAgain();
 		}
 		if ((JavaFrame.clickCount == 9) && (!b)) {
-			answer = JOptionPane.showConfirmDialog(JavaFrame.jPanel, "Draw!", "Congradulation!",
+			answer = JOptionPane.showConfirmDialog(JavaFrame.jPanel, "Draw! Do u want to exit?" + "", "Congradulation!",
 					JOptionPane.YES_NO_OPTION);
+			JavaFrame.clickCount = 0;
 			if (answer == JOptionPane.YES_OPTION) {
 				System.exit(0);
 			} else {
