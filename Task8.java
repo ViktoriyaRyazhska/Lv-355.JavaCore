@@ -1,5 +1,3 @@
-package FinalWork;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -26,7 +24,7 @@ public class Task8 {
 		return numToWord(i / 1000000) + " Million " + ((i % 1000000 > 0) ? " " + numToWord(i % 1000000) : "");
 	}
 
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void start() throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter number from -1m to 1m: ");
 		int age = Integer.parseInt(br.readLine());

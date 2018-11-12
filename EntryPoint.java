@@ -1,3 +1,4 @@
+import java.io.IOException;
 
 public class EntryPoint {
 
@@ -29,7 +30,7 @@ public class EntryPoint {
 			
 			case 2:
 				System.out.println("Task 2:");
-				Task2.start()
+				Task2.start();
 				break;
 			case 3:
 				System.out.println("Task 3:");
