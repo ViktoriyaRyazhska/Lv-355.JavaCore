@@ -1,5 +1,0 @@
-package ClassWork;
-
-public enum Continents {
-	AFRICA, EUROPE, ASIA, NORTHAMERICA, SOUTHAMERICA, AUSTRALIA, ANTARCTICA 
-	}
