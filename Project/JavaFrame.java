@@ -19,6 +19,17 @@ public class JavaFrame {
 	static JPanel jPanel = new JPanel();
 	static int clickCount = 0;
 	static JButton[] jButtons = new JButton[9];
+	static JButton jTurnButton = new JButton();
+
+	public static void startGame() {
+		jFrame.add(jPanel);
+		button(jButtons);
+		menu(jButtons);
+		for (int i = 0; i < jButtons.length; i++) {
+			jButtons[i].setText("");
+			jButtons[i].setEnabled(true);
+		}
+	}
 
 	static JFrame getFrame() {
 		jFrame = new JFrame() {
@@ -27,13 +38,17 @@ public class JavaFrame {
 		jFrame.setVisible(true);
 		jFrame.setResizable(false);
 		jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		jFrame.setBounds(-3, 0, 329, 372);
+		jFrame.setBounds(-3, 0, 329, 398);
 		jFrame.setTitle("XvsO");
 		return jFrame;
 
 	}
 
-	public static void button() {
+	public static void button(JButton[] jButtons) {
+		jTurnButton.setPreferredSize(new Dimension(310, 20));
+		jPanel.add(jTurnButton);
+		jTurnButton.setEnabled(false);
+		jTurnButton.setText("Turn: X");
 		for (int i = 0; i < jButtons.length; i++) {
 			jButtons[i] = new JButton();
 			jButtons[i].setText("");
@@ -44,7 +59,7 @@ public class JavaFrame {
 			b.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent arg0) {
-					PutXorO.putText(b);
+					PutXorO.putText(b, jTurnButton);
 					Logic.winner(jButtons);
 				}
 			});
@@ -63,7 +78,7 @@ public class JavaFrame {
 			public void actionPerformed(ActionEvent e) {
 				Color color1 = JColorChooser.showDialog(jPanel, "What color do u want?", Color.white);
 				jPanel.setForeground(color1);
-				ButtonColor.changeButtonColor(jButtons, color1);
+				changeButtonColor(jButtons, color1);
 			}
 		});
 		changeColor.add(new JMenuItem("Background color")).addActionListener(new ActionListener() {
@@ -82,7 +97,8 @@ public class JavaFrame {
 		about.add(new JMenuItem("About")).addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(jPanel, "Program: XvsO \n Version: 0.0.04 \n \u00a9 Danylo Hlynsky", "About program", JOptionPane.CANCEL_OPTION);
+				JOptionPane.showMessageDialog(jPanel, "Program: XvsO \n Version: 0.0.05 \n \u00a9 Danylo Hlynsky",
+						"About program", JOptionPane.CANCEL_OPTION);
 			}
 		});
 
@@ -91,22 +107,24 @@ public class JavaFrame {
 
 	}
 
-	public static void startGame() {
-		jFrame.add(jPanel);
-		button();
-		menu(jButtons);
-		for (int i = 0; i < jButtons.length; i++) {
-			jButtons[i].setText("");
-			jButtons[i].setEnabled(true);
-		}
-	}
-
 	public static void loadGame() {
 		for (int i = 0; i < jButtons.length; i++) {
 			jButtons[i].setText("");
 			jButtons[i].setEnabled(true);
-			clickCount = 0;
 		}
+		jTurnButton.setText("Turn: X");
+		clickCount = 0;
+	}
+
+	static void changeButtonColor(JButton[] jButtons, Color color) {
+		for (int i = 0; i < jButtons.length; i++) {
+			jButtons[i].setBackground(color);
+		}
+		jTurnButton.setBackground(color);
+	}
+
+	static void changeTurnButtonColor(JButton jButtons, Color color) {
+		jButtons.setBackground(color);
 	}
 //	public static void windowCloser()  {
 //		jFrame.addWindowListener(new WindowAdapter() {
